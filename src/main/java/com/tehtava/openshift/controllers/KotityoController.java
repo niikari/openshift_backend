@@ -41,7 +41,7 @@ public class KotityoController {
 		return kt;
 	}
 	
-	@PutMapping
+	@PutMapping("all/{id}")
 	public Kotityo changeStatus(@PathVariable Long id) {
 		Kotityo kt = this.kotityoRepository.findById(id).get();
 		Boolean tila = kt.getTila();
